@@ -19,11 +19,12 @@ export const Content = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 9rem;
-  row-gap: 9rem;
-  margin-top: 2rem;
+  justify-content: space-between;
+  row-gap: 2rem;
+  column-gap: 6rem;
+  padding: 2rem 1rem;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     grid-template-columns: repeat(
       2,
       1fr
@@ -32,8 +33,8 @@ export const Content = styled.div`
 `
 
 export const Title = styled.div`
-  font-family: Montserrat;
-  font-size: 18px;
+  font-family: ${({ theme }) => theme.fonts.regular};
+  font-size: ${({ theme }) => theme.textSizes['text-regular-l']};
   font-weight: 500;
   line-height: 18px;
   text-align: left;

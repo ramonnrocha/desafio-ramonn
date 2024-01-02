@@ -29,6 +29,5 @@ export const defaultTheme = {
   },
   fonts: {
     regular: 'Montserrat',
-    title: 'Baloo 2',
   },
 }

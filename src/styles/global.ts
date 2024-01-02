@@ -8,10 +8,19 @@ export const GlobalStyle = createGlobalStyle`
     outline: none;
   }
 
+  body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
   body {
     background: ${({ theme }) => theme.colors['base-background']};
     color: ${({ theme }) => theme.colors['base-text']};
     -webkit-font-smoothing: antialiased;
+    font-family: ${({ theme }) => theme.fonts.regular};
+    
   }
 
   body, input, textarea, button {
@@ -27,16 +36,5 @@ export const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
   }
-
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  input[type="number"] {
-    -moz-appearance: textfield;
-  }
-
-  
+ 
 `

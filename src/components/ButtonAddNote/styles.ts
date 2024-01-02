@@ -10,6 +10,7 @@ export const Container = styled.button`
   border: none;
   padding: 1rem 2rem;
   border-radius: 12px;
+  margin-left: auto;
 
   &:hover {
     opacity: 0.7;
@@ -19,4 +20,7 @@ export const Text = styled.span`
   font-size: 1rem;
   font-weight: 600;
   color: #0f0f0f;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 `
