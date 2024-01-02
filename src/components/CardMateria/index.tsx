@@ -11,7 +11,7 @@ import {
 
 import { Trash } from 'phosphor-react'
 
-import IconChart from '../../assets/Chart.svg'
+import IconChart from '../../assets/chart.svg'
 
 export function CardMateria() {
   return (
