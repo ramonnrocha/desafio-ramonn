@@ -36,7 +36,7 @@ export function Bimestre({ idBimestre, data, onUpdate }: PropsBimestre) {
           {data.map((item) => (
             <CardMateria
               nota={item.nota}
-              date={item.atualizadoEm}
+              date={item.criadoEm}
               onUpdate={onUpdate}
               idNota={item.id}
               disciplina={item.disciplina}
