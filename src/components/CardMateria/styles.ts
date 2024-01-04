@@ -1,11 +1,43 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { IconChart } from '../IconChart'
 
-export const CardContainer = styled.div`
+export interface CardStyleProps {
+  disciplina: 'Biologia' | 'Artes' | 'Geografia' | 'Sociologia'
+}
+
+export interface ColorNoteIndentifyType {
+  corNota: string
+}
+
+export const CardContainer = styled.div<CardStyleProps>`
   width: 9.875rem;
   height: 9rem;
   padding-block: 1rem;
-  background: ${({ theme }) => theme.colors['base-card-biologia']};
   border-radius: 20px;
+
+  ${({ disciplina }) =>
+    disciplina === 'Biologia' &&
+    css`
+      background: ${({ theme }) => theme.colors['base-card-biologia']};
+    `}
+
+  ${({ disciplina }) =>
+    disciplina === 'Artes' &&
+    css`
+      background: ${({ theme }) => theme.colors['base-card-artes']};
+    `}
+
+    ${({ disciplina }) =>
+    disciplina === 'Geografia' &&
+    css`
+      background: ${({ theme }) => theme.colors['base-card-geografia']};
+    `}
+
+    ${({ disciplina }) =>
+    disciplina === 'Sociologia' &&
+    css`
+      background: ${({ theme }) => theme.colors['base-card-sociologia']};
+    `}
 `
 
 export const Header = styled.div`
@@ -32,19 +64,21 @@ export const Date = styled.span`
   font-size: ${({ theme }) => theme.textSizes['components-button-s']};
   font-weight: 400;
 `
-export const ContentNota = styled.span`
+export const ContentNota = styled.span<ColorNoteIndentifyType>`
   width: 100%;
   height: 1.875rem;
   background: rgba(15, 15, 15, 0.7);
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: green;
   margin-top: 2rem;
   padding: 0.8rem;
+  ${({ corNota }) => css`
+    color: ${corNota};
+  `}
 `
 
-export const Icon = styled.img`
+export const IconSvg = styled(IconChart)`
   width: 1rem;
   height: 1rem;
 `

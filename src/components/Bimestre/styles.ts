@@ -21,7 +21,7 @@ export const Content = styled.div`
   grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
   row-gap: 2rem;
-  column-gap: 6rem;
+  column-gap: 4rem;
   padding: 2rem 1rem;
 
   @media screen and (max-width: 900px) {
@@ -29,6 +29,7 @@ export const Content = styled.div`
       2,
       1fr
     ); /* 2 colunas em dispositivos menores */
+    grid-gap: 2rem;
   }
 `
 

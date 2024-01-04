@@ -9,7 +9,9 @@ export const defaultTheme = {
     'base-card-geografia': '#C26719',
     'base-card-sociologia': '#9B19C2',
     'base-input': '#EDEDED',
-    'base-note': '#0F0F0F',
+    'base-note-red': '#FF5964',
+    'base-note-yellow': '#FFFF99',
+    'base-note-green': '#05FF00',
   },
   textSizes: {
     'title-title-xl': '3rem',
