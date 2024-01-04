@@ -2,7 +2,6 @@
 
 # FRONT-END
 
-
 ## Pré-requisitos
 Node.js e npm (ou Yarn) instalados
 
